@@ -56,7 +56,7 @@ return (
 
 const NewsCard = (props)=>{
   return(
-    <a href={props.url} className="flex py-3 px-1  hover:bg-gray-100 dark:hover:bg-gray-700">
+    <a href={props.url} target="_blank" className="flex py-3 px-1  hover:bg-gray-100 dark:hover:bg-gray-700">
 
   <div className="pl-2 w-full">
       <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">News from <span className="font-semibold text-gray-900 dark:text-white">{props.newsSite}:&nbsp;</span>{props.title}</div>

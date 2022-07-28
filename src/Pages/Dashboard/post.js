@@ -1,7 +1,5 @@
-import React, { useState,useRef } from 'react'
-import { dataGetter } from '../../Components/localStorageStore';
-import profilepic from "../../Images/profilepic.jpg"
-import Tweetbox from './tweetbox'
+import React, { useState } from 'react'
+
 
 
 
@@ -68,7 +66,7 @@ const Post = (props) => {
       value={comment}
       type="search"
       id="default-search"
-      className={`block p-4 resize-none scrollbar-hide lg:w-[40vw] md:w-[48vw]  w-[72vw]  h-[10vh] rounded-md font-normal bg-neutral-800 text-white ${props.background}   border-gray-300 mb-2 outline-none focus:bg-neutral-700 `}
+      className={`block p-4 resize-none scrollbar-hide lg:w-[28rem] md:w-[28rem]  sm:w-[26rem]  w-[20rem] h-[10vh] rounded-md font-normal bg-neutral-800 text-white ${props.background}   border-gray-300 mb-2 outline-none focus:bg-neutral-700 `}
       placeholder="Add a comment"
       required  
     /><div className=''>

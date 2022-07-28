@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo,useRef } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   dataSetter,
@@ -9,6 +9,9 @@ import {
 import profilepic from "../../Images/profilepic.jpg";
 import Post from "./post";
 import Tweetbox from "./tweetbox";
+import { searchContext } from "./Dashboard";
+
+
 
 
 
@@ -43,6 +46,24 @@ const Middlebar = () => {
       setMsgBody("");
     }
   }, [message]);
+
+  const {searchTerm,setSearchTerm} = useContext(searchContext)
+  const searchHandler =()=>{setUpdatedMessages(dataGetter("messages").filter(e=>{
+    return e.contents.toLowerCase().includes(searchTerm.toLowerCase())
+   }))}
+ 
+ 
+useEffect(()=>{
+  let timer
+if(searchTerm!==""){
+timer = setTimeout(()=>{
+searchHandler()
+  },[500])
+  }
+else{(setUpdatedMessages(dataGetter("messages")))}
+return () => clearTimeout(timer)
+},[searchTerm])
+
 
   const addComment =(obj,id)=>{
     let currentData = dataGetter("messages");
@@ -151,8 +172,8 @@ const Middlebar = () => {
     <div className="bg-black  divide-y divide-gray-700 border-x-[1px] left-[16.5rem] sticky z-20 right-[25rem]  overflow-y-auto scroll-smooth scrollbar-hide h-[200vh] border-gray-700 basis-[40rem]">
       <i title="Logout" onClick={logouthandler} className="fas fa-sign-out-alt text-white float-right mt-5  mr-4 rounded-full"></i>
       <div className={isUpdating ? "flex opacity-10 items-center h-[40vh]  p-2 space-x-4": "flex items-center h-[40vh]  p-2 space-x-4" }>
-        <div className="mb-24">
-          <img className="w-10 ml-3 h-10 mb-2 rounded-full" src={profilepic} alt="pro"/>
+        <div className="mb-24 flex-shrink-0">
+          <img className="w-10 ml-3 h-10  mb-2 rounded-full" src={profilepic} alt="pro"/>
         </div>
         <Tweetbox onChange={writeMessage} onClick={addMessage} value={msgBody} background="bg-black" title="Tweet" user={user}/>
       </div>

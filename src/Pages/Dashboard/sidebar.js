@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import profilepic from "../../Images/profilepic.jpg"
 import { dataGetter } from '../../Components/localStorageStore'
 import NotificationBar from './notificationBar'
-import { ButtonWhite } from '../../Components/buttons'
-import { useNavigate } from 'react-router-dom'
+import { searchContext } from './Dashboard'
+
 
 const Leftbar = () => {
-
+  
+ 
 
     
 
@@ -41,14 +42,15 @@ const Leftbar = () => {
 
 
 const Rightbar = ()=>{
-    const navigate = useNavigate()
+   
+  const {searchTerm,setSearchTerm} = useContext(searchContext)
 
     return(
         <div className='bg-black flex flex-col absolute w-[25rem] px-10 pt-2 scroll-smooth left-[55rem] h-full basis-[25rem] '>
         <div className='mb-12 '>
         <div className="fixed z-30 h-12 m-auto bg-black w-[25rem] ">
    
-    <input type="search" id="default-search" className="block p-4 pl-10 w-80 text-sm text-white bg-[#202327] rounded-full border border-gray-300 focus:ring-[#1da1f2] focus:border-[#1da1f2]" placeholder="Search Bird feed" required/>      
+    <input type="search" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} id="default-search" className="block p-4 pl-10 w-80 text-sm text-white bg-[#202327] rounded-full border border-gray-300 focus:ring-[#1da1f2] focus:border-[#1da1f2]" placeholder="Search Bird feed" required/>      
 </div>
         </div>
         <div id="dropdownNotification" className=" mt-6 h-[25vh]  overflow-y-auto scroll-smooth  scrollbar-hide z-10 w-full max-w-sm bg-white rounded-lg divide-y divide-gray-100 shadow  dark:bg-[#202327] dark:divide-gray-700" >
