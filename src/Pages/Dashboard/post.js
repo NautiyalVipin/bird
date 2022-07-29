@@ -41,9 +41,9 @@ const Post = (props) => {
   
     
 <div className="flex flex-col justify-between p-4 leading-normal">
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{(props.contents).slice(0,38)}!</h5>
-    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.contents}</p>
-    <img className="object-fit w-full h-96 rounded-lg md:h-60 " src={`https://source.unsplash.com/random/?${props.photo}`} alt=""/>
+    <h5 className="mb-2 text-xl tracking-tight text-gray-900 dark:text-white">{(props.contents).slice(0,38)}...</h5>
+    {props.url!=="" ? <a href={props.url} target="__blank"><p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.contents}</p></a>:<p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.contents}</p>}
+    {props.photo!=="" ? <img className="object-fit w-full h-96 rounded-lg md:h-60 " src={props.photo} alt=""/>:""}
     <div className='pt-4 flex justify-between  gap-1 '>
     <span>
     <p className='text-white text-xs text-center font-extralight'></p>

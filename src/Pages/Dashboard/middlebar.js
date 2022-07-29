@@ -196,7 +196,8 @@ return () => clearTimeout(timer)
                 updatedOn={element.updatedOn}
                 profilepic={profilepic}
                 contents={element.contents}
-                photo={index}>
+                url={element.url}
+                photo={index<10?`https://source.unsplash.com/random/?${index}`:""}>
                 {isOwner && (
                   <div className="float-right">
                     <button title="edit post" onClick={() => startEditHandler(element.postID)} className="hover:bg-gray-800 mb-1.5 px-2 rounded-full">
