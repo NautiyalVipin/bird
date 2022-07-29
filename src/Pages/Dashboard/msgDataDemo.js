@@ -1,7 +1,7 @@
 const messages =[
     {
     postID: 1, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '24 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -12,7 +12,7 @@ const messages =[
 },
     {
     postID: 2, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '24 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -34,7 +34,7 @@ const messages =[
 },
     {
     postID: 4, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '26 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -45,7 +45,7 @@ const messages =[
 },
     {
     postID: 5, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '27 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -56,7 +56,7 @@ const messages =[
 },
     {
     postID: 6, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '30 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -67,7 +67,7 @@ const messages =[
 },
     {
     postID: 7, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '10 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -78,7 +78,7 @@ const messages =[
 },
     {
     postID: 8, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '12 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -89,7 +89,7 @@ const messages =[
 },
     {
     postID: 9, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '15 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
@@ -100,7 +100,7 @@ const messages =[
 },
     {
     postID: 10, 
-    contents: '25 Places to have a wonderful vacation, Trending Vacation Spots!',
+    contents: '15 Places to have a wonderful vacation, Trending Vacation Spots!',
     postAuthor: 'admin1', 
     createdOn: new Date().toLocaleString(), 
     updatedOn: '' ,
